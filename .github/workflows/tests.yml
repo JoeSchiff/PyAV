@@ -92,9 +92,4 @@ jobs:
         with:
           merge-multiple: true
           path: dist/
-      - name: Publish to PyPI
-        if: github.event_name == 'release' && github.event.action == 'published'
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_TOKEN }}
+
